@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+html, body {
+  height: 100%;
+  width: 100%;
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Roboto', sans-serif;
+  border-radius:15px;
+  background: linear-gradient(106.77deg, #266896 1.5%, #0C8BB6 35.25%, #FBE882 134.03%);
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+}
+#bolas{
+  position:absolute;
+}
+#cadastro{
+  display:none;
+}
+#form{
+  width:30rem;
+  height: 43.5rem;
+  border-radius:0 15px 15px 0;
+}
+.nav{
+  z-index:1;
+  width:100vw;
+  position:fixed;
+  top:0;
+  left:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  background: #fff;
+  color:#000;
+  height:60px;
+}
+#logo{
+  width:247px;
+  height:116px;
+  transform:translateY(-50px);
+  position:absolute;
+}
+.navItem{
+  padding:0.5rem;
+  cursor:pointer;
+}
+.navItem:hover{
+  text-decoration: underline #000;
+}
+.navItem:last-child{
+  border-right:none;
+}
+
+.form{
+  width:37.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+.formInput{
+  transition:0.3s;
+  height:25px;
+  width:260px;
+  padding:0.8rem;
+  margin-block:0.8rem;
+  border:none ;
+  background-color:transparent;
+  border-bottom:2px solid #E16832;
+  outline: none !important;
+  color:white
+}
+.formButton{
+  width:289px;
+  display:flex;
+  border:none;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  border-radius:4px;
+  font-size:16px;
+  height:45px;
+  margin-block:0.5rem;
+  padding-block:2rem;
+  background-color:#266896;
+  color:white;
+  cursor:pointer;
+}
+.formButton:active{
+  background-color:#266896;
+}
+.formButton img{
+  width:20px;
+  padding-inline:0.5rem;
+  padding-block:0.25rem;
+}
+#google{
+  background-color:#fff;
+  color:#000;
+}
+#apple{
+  background-color:#000;
+  color:#fff;
+  border-color:#fff;
+}
+.container{
+  width:37.5rem;
+  height:43.5rem;
+  display:flex;
+  justify-content:center;
+  flex-direction:row;
+  box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(76deg, rgba(232, 148, 101, 0.77) -5.21%, rgba(196, 196, 196, 0) 104.19%);
+  backdrop-filter: blur(40px);
+  /* Note: backdrop-filter has minimal browser support */
+  
+  border-radius: 25px;
+}
+@media screen and (max-width: 900px){
+  a{
+    font-size:10px
+  }
+  #cadastro{
+    display:flex;
+    color:white;
+  }
+  body{
+    flex-direction:column;
+    background-position: top;
+    background-size: cover;
+  }
+  #form{
+    display:none;
+  }
+  .container{
+    height: 100%;
+    width: 100%;
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family: 'Roboto', sans-serif;
+    border-radius:0;
+    border:none;
+    box-shadow:none;
+  }
+  .formInput{
+    width:70%;
+    height:25px;
+      margin-block:0.8rem;
+  }
+  .formButton{
+    width:75%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    font-weight:bold;
+    border-radius:4px;
+    height:45px;
+    margin-block:0.5rem;
+    background-color:#266896;
+    color:white;
+  }
+  #bolas{
+    display:none;
+  }
+  #logo{
+    display:none;
+  }
+}
+@media screen and (max-width: 1600px) and (min-width:901px){
+  .container{ 
+    width:25rem;
+    height:29rem;
+    display:flex;
+    flex-direction:row;
+    border-radius:15px;
+    box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.15);
+    border:none;
+  }
+  #form{
+    width:20rem;
+    height:29rem;
+    border-radius:0 15px 15px 0;
+  }
+    .formInput{
+    width:169px;
+    height:15px;
+    padding:0.5rem;
+  }
+  .formButton{
+    width:187px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    font-weight:bold;
+    border-radius:4px;
+    height:33px;
+    margin-block:0.5rem;
+    background-color:#266896;
+    color:white;
+  }
+}
+
+@keyframes esconde-email {
+  100% {transform: translateY(-50px);}
+}
